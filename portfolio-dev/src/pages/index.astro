@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+
 import LinkedInIcon from '../components/icons/LinkedIn.astro'
 import GitHubIcon from '../components/icons/GitHub.astro'
 import EmailIcon from '../components/icons/Email.astro'
 import ProjectsIcon from '../components/icons/Projects.astro'
-import ReactIcon from '../components/icons/React.astro'
-import ExpressIcon from '../components/icons/Express.astro'
-import SQLIcon from '../components/icons/SQL.astro'
+import SeveralProject from '../components/SeveralProject.astro'
+import Fantasea from '../components/Fantasea.astro'
+
 ---
 
 <Layout title="Dev Portfolio - Antonio Mangado">
@@ -37,14 +38,8 @@ import SQLIcon from '../components/icons/SQL.astro'
 
 		<section class="w-full lg:w-[740px] mt-28">
 			<p class="opacity-60 flex flex-row gap-x-3 items-center"><ProjectsIcon />Latest projects</p>
-			<h2 class="text-4xl font-bold mt-8 mb-5">Several Energy - Power Bill Comparator</h2>
-			<div class="flex flex-row gap-x-5">
-				<ReactIcon class="size-12 mb-5"/>
-				<ExpressIcon class="size-12 mb-5"/>
-				<SQLIcon class="size-12 mb-5"/>
-			</div>
-			<p class="text-xl opacity-60 mb-10">Several Energy is a counseling company looking forward to maximising savings from power bills. This app accepts a client's energy data and shows what other companies would charge.</p>
-			<img src="/6shots_so.webp" alt="several-app" class="rounded-3xl h-[450px] w-full object-cover">
+			<SeveralProject />
+			<Fantasea />
 		</section>
 	</main>
 </Layout>

@@ -1,0 +1,26 @@
+---
+import Carrousel from '../components/Carrousel.astro';
+import ReactIcon from '../components/icons/React.astro'
+import JWTIcon from '../components/icons/JWT.astro'
+import MongoDBIcon from '../components/icons/Mongo.astro'
+---
+
+<h2 class="text-4xl font-bold mt-24 mb-5">Fantasea - Fantasy Book Repository</h2>
+<div class="flex flex-row gap-x-5">
+    <div class="flex items-center gap-x-2 mb-5">
+        <ReactIcon class="size-12"/>
+        <p class="opacity-60">React</p>
+    </div>
+    <div class="flex items-center mb-5">
+        <MongoDBIcon class="size-12"/>
+        <p class="opacity-60">MongoDB</p>
+    </div>
+    <div class="flex items-center gap-x-2 mb-5">
+        <JWTIcon class="size-12"/>
+        <p class="opacity-60">JWT</p>
+    </div>
+    
+    
+</div>
+<p class="text-xl opacity-60 mb-10">A GoodReads for fantasy books. Fantasea lets the user browse a catalogue of varied fantasy genres, store books in different reading lists, and review previously read books.</p>
+<Carrousel />

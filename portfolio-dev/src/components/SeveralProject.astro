@@ -1,0 +1,26 @@
+---
+import Carrousel from '../components/Carrousel.astro';
+import ReactIcon from '../components/icons/React.astro'
+import ExpressIcon from '../components/icons/Express.astro'
+import SQLIcon from '../components/icons/SQL.astro'
+---
+
+<h2 class="text-4xl font-bold mt-8 mb-5">Several Energy - Power Bill Comparator</h2>
+<div class="flex flex-row gap-x-5">
+    <div class="flex items-center gap-x-2 mb-5">
+        <ReactIcon class="size-12"/>
+        <p class="opacity-60">React</p>
+    </div>
+    <div class="flex items-center gap-x-2 mb-5">
+        <SQLIcon class="size-12"/>
+        <p class="opacity-60">PostgreSQL</p>
+    </div>
+    <div class="flex items-center gap-x-2 mb-5">
+        <ExpressIcon class="size-12"/>
+        <p class="opacity-60">Express.js</p>
+    </div>
+    
+    
+</div>
+<p class="text-xl opacity-60 mb-10">Several Energy is a counseling company looking forward to maximising savings from power bills. This app accepts a client's energy data and shows what other companies would charge.</p>
+<Carrousel />
