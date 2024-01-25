@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import GitHubIcon from '../components/icons/GitHub.astro'
+import EmailIcon from '../components/icons/Email.astro'
+---
+
+<Layout title="Dev Portfolio - Antonio Mangado">
+	<main>
+		<section class="w-full lg:w-[740px] mt-28">
+			<h1 class="mb-8 flex items-center gap-x-4 text-5xl font-bold">Hey, I'm Antonio
+				<a href="https://www.linkedin.com/in/antonio-mangado/" 
+					target="_blank" 
+					rel="noopener" 
+					class="flex items-center">
+					<Badge>Open to Work</Badge>
+				</a>
+			</h1>
+			<h2 class="text-3xl text-wrap mb-12"><span class="text-blue-500">Accredited Web developer</span>. Based in Andalusia, Spain. I specialize in Front/Back development. <span class="opacity-60">I also like Gundams</span></h2>
+			<ul class="flex flex-row gap-x-5">
+				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2"> 
+					<a class="flex flex-row gap-x-2 " href="https://www.linkedin.com/in/antonio-mangado/" target="_blank" rel="no-opener"><LinkedInIcon /> LinkedIn</a> 
+				</li>
+				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2"> 
+					<a class="flex flex-row gap-x-2" href="https://github.com/AntonioMangado" target="_blank" rel="no-opener"><GitHubIcon /> GitHub</a> 
+				</li>
+				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2"> 
+					<EmailIcon /> antonio.mangado@gmail.com
+				</li>
+			</ul>
+		</section>
+	</main>
+</Layout>
