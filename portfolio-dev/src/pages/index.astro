@@ -8,6 +8,7 @@ import EmailIcon from '../components/icons/Email.astro'
 import ProjectsIcon from '../components/icons/Projects.astro'
 import SeveralProject from '../components/SeveralProject.astro'
 import Fantasea from '../components/Fantasea.astro'
+import Quiz from '../components/Quiz.astro';
 
 ---
 
@@ -22,15 +23,15 @@ import Fantasea from '../components/Fantasea.astro'
 					<Badge>Open to Work</Badge>
 				</a>
 			</h1>
-			<h2 class="text-3xl mb-12 text-pretty"><span class="text-blue-500">Accredited Web developer</span>. Based in Andalusia, Spain. I specialize in Front/Back development. <span class="opacity-60">I also like Gundams</span></h2>
+			<h2 class="text-3xl mb-12 text-pretty"><span class="text-blue-500">Accredited Web developer</span>. Based in Andalusia, Spain. I specialize in Front/Back development. <br><span class="opacity-60">I also like Gundams.</span></h2>
 			<ul class="flex flex-row gap-x-5">
-				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2"> 
+				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2 hover:border-blue-500 transition duration-300"> 
 					<a class="flex flex-row gap-x-2 " href="https://www.linkedin.com/in/antonio-mangado/" target="_blank" rel="no-opener"><LinkedInIcon /> LinkedIn</a> 
 				</li>
-				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2"> 
+				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2 hover:border-blue-500 transition duration-300"> 
 					<a class="flex flex-row gap-x-2" href="https://github.com/AntonioMangado" target="_blank" rel="no-opener"><GitHubIcon /> GitHub</a> 
 				</li>
-				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2"> 
+				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2 hover:border-blue-500 transition duration-300"> 
 					<EmailIcon /> antonio.mangado@gmail.com
 				</li>
 			</ul>
@@ -40,6 +41,7 @@ import Fantasea from '../components/Fantasea.astro'
 			<p class="opacity-60 flex flex-row gap-x-3 items-center"><ProjectsIcon />Latest projects</p>
 			<SeveralProject />
 			<Fantasea />
+			<Quiz />
 		</section>
 	</main>
 </Layout>

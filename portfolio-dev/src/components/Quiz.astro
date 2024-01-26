@@ -1,0 +1,30 @@
+---
+import ImgGallery from '../components/ImgGallery.astro';
+import ReactIcon from '../components/icons/React.astro'
+import JWTIcon from '../components/icons/JWT.astro'
+import MongoDBIcon from '../components/icons/Mongo.astro'
+import JavaScriptIcon from '../components/icons/JavaScript.astro'
+import CSSIcon from '../components/icons/CSS.astro'
+import FirebaseIcon from '../components/icons/Firebase.astro'
+---
+
+<h2 class="text-4xl font-bold mt-24 mb-5">Pop Quiz - How pop aware are you?</h2>
+<div class="flex flex-row gap-x-5">
+    <div class="flex items-center gap-x-2 mb-5">
+        <CSSIcon class="size-12"/>
+        <p class="opacity-60">CSS</p>
+    </div>
+    <div class="flex items-center gap-x-2 mb-5">
+        <JavaScriptIcon class="size-12"/>
+        <p class="opacity-60">JavaScript</p>
+    </div>
+    <div class="flex items-center gap-x-2 mb-5">
+        <FirebaseIcon class="size-12"/>
+        <p class="opacity-60">Firebase</p>
+    </div>
+</div>
+<p class="text-xl opacity-60 mb-10">A pop culture quiz, consisting of 10 questions to test the user's knowledge on pop culture. Questions are retrieved from an external API and randomly generated. Authentication built with Firebase.</p>
+<ImgGallery />
+<p class="mb-20 opacity-60 text-center">
+    <a class="hover:underline" href="https://github.com/javirs200/QuiZ_vol.2" target="_blank" rel="no-opener">Source Code</a> | <a class="hover:underline" href="https://javirs200.github.io/QuiZ_vol.2/#" target="_blank" rel="no-opener">Live Demo</a>
+</p>
