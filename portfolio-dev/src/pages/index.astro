@@ -6,6 +6,7 @@ import LinkedInIcon from '../components/icons/LinkedIn.astro'
 import GitHubIcon from '../components/icons/GitHub.astro'
 import EmailIcon from '../components/icons/Email.astro'
 import ProjectsIcon from '../components/icons/Projects.astro'
+import AboutMeIcon from '../components/icons/AboutMeIcon.astro'
 import SeveralProject from '../components/SeveralProject.astro'
 import Fantasea from '../components/Fantasea.astro'
 import Quiz from '../components/Quiz.astro';
@@ -37,11 +38,25 @@ import Quiz from '../components/Quiz.astro';
 			</ul>
 		</section>
 
-		<section class="w-full lg:w-[740px] mt-28">
+		<section id="projects" class="w-full lg:w-[740px] mt-28">
 			<p class="opacity-60 flex flex-row gap-x-3 items-center"><ProjectsIcon />Latest projects</p>
 			<SeveralProject />
 			<Fantasea />
 			<Quiz />
+		</section>
+
+		<section id="about" class="w-full lg:w-[740px] mt-28 mb-96">
+			<p class="opacity-60 flex flex-row gap-x-3 items-center"><AboutMeIcon />About me</p>
+			<article class="flex gap-x-6 mt-8">
+				<img src="/profile-pic.png" alt="Antonio's profile pic" class="size-72 rounded-lg shadow-sm grayscale-0 mt-2 -rotate-90">
+				<div class="flex flex-col gap-y-4">
+					<h3 class="text-3xl font-bold">I'm Antonio, <span class="text-blue-500">a FullStack developer</span> trying to center stuff on websites from sunny Andalusia.</h3>
+					<p class="text-xl opacity-60">I spent 7 fantastic years on education before realising that coding was what fired me up. I took a FullStack bootcamp course with TheBridge (Madrid, Spain), getting proficient across different areas of web development; front-end development with React.js, back-end with Node.js and Express.js, responsive design, cloud deployment, unitary testing.</p>
+					<p class="text-xl opacity-60">These days my time is spent coding, polishing, and improving apps that I built while studying. In the meantime, I am also actively looking for jobs and studying to consolidate all the knowledge and skills acquired during the bootcamp.</p>
+					<p class="text-xl opacity-60">Away from the keyboard, you'll find me building gundams, reading an unhealthy amount of fantasy books, and petting all the good dogs.</p>
+				</div>
+			</article>
+			
 		</section>
 	</main>
 </Layout>
