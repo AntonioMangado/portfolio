@@ -14,9 +14,9 @@ import Quiz from '../components/Quiz.astro';
 ---
 
 <Layout title="Dev Portfolio - Antonio Mangado">
-	<main>
-		<section class="w-full lg:w-[740px] mt-28">
-			<h1 class="mb-8 flex items-center gap-x-4 text-5xl font-bold">Hey, I'm Antonio
+	<main class="flex flex-col items-center">
+		<section class="w-3/4 sm:w-[500px] md:w-[600px] lg:w-[740px] mt-28">
+			<h1 class="mb-8 flex items-center gap-x-4 text-3xl sm:text-4xl md:text-5xl font-bold">Hey, I'm Antonio
 				<a href="https://www.linkedin.com/in/antonio-mangado/" 
 					target="_blank" 
 					rel="noopener" 
@@ -24,31 +24,31 @@ import Quiz from '../components/Quiz.astro';
 					<Badge>Open to Work</Badge>
 				</a>
 			</h1>
-			<h2 class="text-3xl mb-12 text-pretty"><span class="text-blue-500">Accredited Web developer</span>. Based in Andalusia, Spain. I specialize in Front/Back development. <br><span class="opacity-60">I also like Gundams.</span></h2>
-			<ul class="flex flex-row gap-x-5">
-				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2 hover:border-blue-500 transition duration-300"> 
+			<h2 class="text-2xl md:text-3xl mb-12"><span class="text-blue-500">Accredited Web developer</span>. Based in Andalusia, Spain. I specialize in Front/Back development.<span class="opacity-60"> I also make very good salmorejo.</span></h2>
+			<ul class="flex flex-col items-center md:flex-row gap-x-5 gap-y-5">
+				<li class="bg-gray-200 text-[16px] w-[321px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2 hover:border-blue-500 transition duration-300"> 
 					<a class="flex flex-row gap-x-2 " href="https://www.linkedin.com/in/antonio-mangado/" target="_blank" rel="no-opener"><LinkedInIcon /> LinkedIn</a> 
 				</li>
-				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2 hover:border-blue-500 transition duration-300"> 
+				<li class="bg-gray-200 text-[16px] w-[321px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2 hover:border-blue-500 transition duration-300"> 
 					<a class="flex flex-row gap-x-2" href="https://github.com/AntonioMangado" target="_blank" rel="no-opener"><GitHubIcon /> GitHub</a> 
 				</li>
-				<li class="bg-gray-200 text-[16px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2 hover:border-blue-500 transition duration-300"> 
+				<li class="bg-gray-200 text-[16px] w-[321px] flex flex-row items-center gap-x-2 opacity-60 border-2 rounded-full px-6 py-2 hover:border-blue-500 transition duration-300"> 
 					<EmailIcon /> antonio.mangado@gmail.com
 				</li>
 			</ul>
 		</section>
 
-		<section id="projects" class="w-full lg:w-[740px] mt-28">
+		<section id="projects" class="w-3/4 sm:w-[500px] md:w-[600px] lg:w-[740px] mt-28">
 			<p class="opacity-60 flex flex-row gap-x-3 items-center"><ProjectsIcon />Latest projects</p>
 			<SeveralProject />
 			<Fantasea />
 			<Quiz />
 		</section>
 
-		<section id="about" class="w-full lg:w-[740px] mt-28 mb-96">
+		<section id="about" class="w-3/4 sm:w-[500px] md:w-[600px] lg:w-[740px] mt-28">
 			<p class="opacity-60 flex flex-row gap-x-3 items-center"><AboutMeIcon />About me</p>
-			<article class="flex gap-x-6 mt-8">
-				<img src="/profile-pic.png" alt="Antonio's profile pic" class="size-72 rounded-lg shadow-sm grayscale-0 mt-2 -rotate-90">
+			<article class="flex flex-col md:flex-row md:items-start gap-x-6 gap-y-6 mt-8">
+				<img src="/profile-pic.png" alt="Antonio's profile pic" class="size-72 rounded-lg shadow-sm grayscale-0 mt-2 md:-rotate-90">
 				<div class="flex flex-col gap-y-4">
 					<h3 class="text-3xl font-bold">I'm Antonio, <span class="text-blue-500">a FullStack developer</span> trying to center stuff on websites from sunny Andalusia.</h3>
 					<p class="text-xl opacity-60">I spent 7 fantastic years on education before realising that coding was what fired me up. I took a FullStack bootcamp course with TheBridge (Madrid, Spain), getting proficient across different areas of web development; front-end development with React.js, back-end with Node.js and Express.js, responsive design, cloud deployment, unitary testing.</p>
