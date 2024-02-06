@@ -1,0 +1,27 @@
+---
+import ImgGalleryMH from '../components/ImgGalleryMH.astro';
+import JavaScriptIcon from '../components/icons/JavaScript.astro'
+import CSSIcon from '../components/icons/CSS.astro'
+import HTMLIcon from '../components/icons/HTML.astro'
+---
+
+<h2 class="text-4xl font-bold mt-24 mb-5">Monster Hunter Companion App - Weapon Finder</h2>
+<div class="flex flex-col sm:flex-row gap-x-5">
+    <div class="flex items-center gap-x-2 mb-5">
+        <HTMLIcon class="size-12"/>
+        <p class="opacity-60">HTML</p>
+    </div>
+    <div class="flex items-center gap-x-2 mb-5">
+        <CSSIcon class="size-12"/>
+        <p class="opacity-60">CSS</p>
+    </div>
+    <div class="flex items-center gap-x-2 mb-5">
+        <JavaScriptIcon class="size-12"/>
+        <p class="opacity-60">JavaScript</p>
+    </div>
+</div>
+<p class="text-xl opacity-60 mb-10">One of my very first apps, built with vanilla JS and standard CSS to consolidate all the foundation programming done, before jumping into newer and more recent frameworks.</p>
+<ImgGalleryMH />
+<p class="opacity-60 text-center">
+    <a class="hover:underline" href="https://github.com/AntonioMangado/monterHunterCompanion" target="_blank" rel="no-opener">Source Code</a> | <a class="hover:underline" href="https://antoniomangado.github.io/monterHunterCompanion/" target="_blank" rel="no-opener">Live Demo</a>
+</p>
