@@ -21,7 +21,8 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Header />
-		<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+		<div class="absolute inset-0 -z-10 w-full h-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
+		</div>
 		<slot />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 	</body>
@@ -44,7 +45,12 @@ const { title } = Astro.props;
 	}
 
 	header {
-		box-shadow: 0 5px 30px 30px #ffffffe0;
+		box-shadow: 0 5px 30px 30px #fffffff6;
+	}
+
+	.active {
+		font-weight: bold;
+		color: #3399ff;
 	}
 
 	.wave {

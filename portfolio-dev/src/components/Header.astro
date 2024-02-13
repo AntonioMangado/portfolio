@@ -1,7 +1,36 @@
-<header class="flex justify-between items-center w-3/4 max-w-[1120px] pt-4 pb-2 sticky top-0 bg-[#ffffffe0] z-40">
+---
+
+---
+
+<header class="flex justify-between items-center w-3/4 max-w-[1120px] pt-4 pb-2 sticky top-0 bg-[#fffffff6] z-40">
     <img class="rounded-full size-12" src="./profile-pic.png" alt="">
     <nav class="flex flex-row gap-x-10 text-[#757575]">
-        <a href="/#projects" class="hover:underline">Projects</a>
-        <a href="/#about" class="hover:underline">About</a>
+        <a href="/#home" class="hover:underline active:font-bold active">Home</a>
+        <a href="/#projects" class="hover:underline active:font-bold">Projects</a>
+        <a href="/#about" class="hover:underline active:font-bold">About</a>
     </nav>
 </header>
+
+<script>
+    const navLinkEls = document.querySelectorAll("nav a")
+    const sectionEls = document.querySelectorAll(".section")
+    let currentSection = "home"
+
+    window.addEventListener("scroll", () => {
+        sectionEls.forEach(sectionEl => {
+            if (window.scrollY >= (sectionEl.offsetTop - 200)) {
+                currentSection = sectionEl.id
+                
+            }
+        })
+
+        navLinkEls.forEach(navLinkEl => {
+            if (navLinkEl.href.includes(currentSection)) {
+                document.querySelector(".active")?.classList.remove("active")
+                navLinkEl.classList.add("active")
+            }
+        })
+    })
+
+    
+</script>
