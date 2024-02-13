@@ -12,8 +12,8 @@
 </header>
 
 <script>
-    const navLinkEls = document.querySelectorAll("nav a")
-    const sectionEls = document.querySelectorAll(".section")
+    const navLinkEls = document.querySelectorAll<HTMLAnchorElement>("nav a")
+    const sectionEls = document.querySelectorAll<HTMLElement>(".section")
     let currentSection = "home"
 
     window.addEventListener("scroll", () => {
@@ -31,6 +31,4 @@
             }
         })
     })
-
-    
 </script>
