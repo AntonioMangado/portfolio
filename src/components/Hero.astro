@@ -1,0 +1,192 @@
+---
+
+---
+
+<section
+  class="flex flex-col justify-center items-center min-h-screen p-8 w-full"
+>
+  <!-- Card -->
+  <div class="hero-card relative overflow-hidden max-w-3xl w-full mx-auto rounded-3xl border border-[var(--color-borderhover)] bg-[var(--color-middleground)] px-12 py-16 flex flex-col items-center gap-10 text-center">
+    <!-- Dot grid texture -->
+    <div class="hero-dots absolute inset-0 pointer-events-none"></div>
+
+    <!-- Top radial glow -->
+    <div class="hero-glow absolute pointer-events-none"></div>
+
+    <!-- Greeting (animated) -->
+    <p class="relative text-[var(--color-subtext)] text-2xl font-medium tracking-wide">
+      <span id="greeting-text"></span><span
+        id="greeting-cursor"
+        class="greeting-cursor">|</span
+      >
+    </p>
+
+    <!-- Headline -->
+    <h1
+      class="relative text-[var(--color-text)] text-7xl md:text-8xl font-extrabold leading-tight tracking-tight"
+    >
+      I build <span class="hero-gradient">fronts</span><br />and <span class="hero-gradient">backs.</span>
+    </h1>
+
+    <!-- Accent divider -->
+    <div class="hero-divider"></div>
+
+    <!-- CTA -->
+    <a
+      href="#experience"
+      class="relative inline-flex items-center gap-3 px-7 py-4 rounded-full border border-[var(--color-borderhover)] text-[var(--color-text)] text-base font-semibold hover:bg-[var(--color-foreground)] hover:border-[var(--color-buttonhover)] transition-colors"
+    >
+      See my experience
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Bobbing scroll arrow -->
+  <a
+    href="#experience"
+    aria-label="Scroll to experience"
+    class="scroll-arrow mt-10 flex items-center justify-center w-10 h-10 text-[var(--color-subtext)] hover:text-[var(--color-text)] transition-colors"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </a>
+</section>
+
+<style>
+  .hero-card {
+    box-shadow: 0 0 80px 0 rgba(98, 114, 255, 0.07);
+  }
+
+  .hero-dots {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .hero-glow {
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 640px;
+    height: 320px;
+    background: radial-gradient(ellipse at center, rgba(98, 114, 255, 0.18) 0%, transparent 70%);
+  }
+
+  .hero-gradient {
+    background: linear-gradient(130deg, rgb(247, 248, 255), rgb(140, 168, 255), rgb(98, 114, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-divider {
+    width: 5rem;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(98, 114, 255, 0.55), transparent);
+  }
+
+  .scroll-arrow {
+    animation: bob 1.6s ease-in-out infinite;
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(8px); }
+  }
+
+  .greeting-cursor {
+    animation: blink 1s step-end infinite;
+  }
+  .greeting-cursor.done {
+    animation: none;
+    opacity: 0;
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  const el = document.getElementById("greeting-text")!;
+  const cursor = document.getElementById("greeting-cursor")!;
+
+  const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
+
+  async function type(text: string, speed = 80) {
+    for (const char of text) {
+      el.textContent += char;
+      await sleep(speed);
+    }
+  }
+
+  async function erase(count: number, speed = 50) {
+    for (let i = 0; i < count; i++) {
+      el.textContent = el.textContent!.slice(0, -1);
+      await sleep(speed);
+    }
+  }
+
+  async function run() {
+    await type("Good... ");
+    await sleep(500);
+
+    // morning?
+    await type("morning?");
+    await sleep(1400);
+    await erase("morning?".length);
+    await sleep(300);
+
+    // afternoon?
+    await type("afternoon?");
+    await sleep(1400);
+    await erase("afternoon?".length);
+    await sleep(300);
+
+    // night?
+    await type("night?");
+    await sleep(1400);
+
+    // delete everything
+    await erase(el.textContent!.length, 40);
+    await sleep(400);
+
+    // final: Hello,
+    await type("Hello,");
+
+    // stop the cursor blink
+    cursor.classList.add("done");
+  }
+
+  run();
+</script>

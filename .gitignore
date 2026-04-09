@@ -23,3 +23,5 @@ pnpm-debug.log*
 # Claude Code
 .claude/
 skills-lock.json
+CLAUDE.md
+plans/
