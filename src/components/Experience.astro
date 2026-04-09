@@ -2,10 +2,13 @@
 
 ---
 
-<section id="experience" class="flex flex-col items-center w-full px-8 pb-24">
+<section
+  id="experience"
+  class="flex flex-col items-center w-full px-8 pb-24 min-h-screen scroll-mt-32"
+>
   <div class="max-w-3xl w-full mx-auto flex flex-col gap-6">
     <!-- Section heading -->
-    <div class="mb-4">
+    <div class="mb-4 flex flex-col items-center">
       <h2 class="text-[var(--color-text)] text-4xl font-extrabold">
         Experience
       </h2>
@@ -105,8 +108,14 @@
 
     <!-- Secondary card: Teacher -->
     <div
-      class="relative rounded-3xl border border-[var(--color-borderhover)] bg-[var(--color-middleground)] px-10 py-8 flex flex-col gap-4"
+      class="relative rounded-3xl border border-[var(--color-borderhover)] bg-[var(--color-middleground)] px-10 py-8 flex flex-col gap-4 opacity-50"
     >
+      <!-- Handwritten annotation -->
+      <div
+        class="exp-handnote pointer-events-none select-none absolute -bottom-4 -right-2"
+      >
+        <span class="exp-handnote-text">wasn't a dev back then!</span>
+      </div>
       <!-- Header -->
       <div
         class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
@@ -143,6 +152,18 @@
 </section>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
+
+  .exp-handnote {
+    transform: rotate(-10deg);
+  }
+
+  .exp-handnote-text {
+    font-family: "Caveat", cursive;
+    font-size: 1.4rem;
+    color: #ff2020;
+  }
+
   .exp-divider {
     width: 4rem;
     height: 1px;
