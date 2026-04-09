@@ -1,0 +1,202 @@
+---
+
+---
+
+<section id="experience" class="flex flex-col items-center w-full px-8 pb-24">
+  <div class="max-w-3xl w-full mx-auto flex flex-col gap-6">
+    <!-- Section heading -->
+    <div class="mb-4">
+      <h2 class="text-[var(--color-text)] text-4xl font-extrabold">
+        Experience
+      </h2>
+      <div class="exp-divider mt-3"></div>
+    </div>
+
+    <!-- Main card: Full Stack Developer -->
+    <div
+      class="exp-card-featured relative overflow-hidden rounded-3xl border border-[var(--color-borderhover)] bg-[var(--color-middleground)] px-10 py-8 flex flex-col gap-6"
+    >
+      <!-- Dot grid texture -->
+      <div class="exp-dots absolute inset-0 pointer-events-none"></div>
+
+      <!-- Header -->
+      <div
+        class="relative flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
+      >
+        <div class="flex flex-col gap-1">
+          <span class="text-2xl font-extrabold text-[var(--color-text)]"
+            >Check-in Scan</span
+          >
+          <div class="flex flex-wrap items-center gap-2 text-sm">
+            <span
+              class="exp-role-pill font-semibold px-3 py-0.5 rounded-full border border-[var(--color-borderhover)] text-xs"
+              >Full Stack Developer</span
+            >
+            <span class="text-[var(--color-subtext)]">·</span>
+            <span class="text-[var(--color-subtext)]">Full-time</span>
+          </div>
+          <span class="text-[var(--color-subtext)] text-sm"
+            >Fuengirola, Andalusia, Spain · Hybrid</span
+          >
+        </div>
+        <span
+          class="shrink-0 self-start px-4 py-1.5 rounded-full border border-[var(--color-borderhover)] bg-[var(--color-middleground)] text-[var(--color-subtext)] text-xs whitespace-nowrap"
+        >
+          Jul 2024 – Apr 2026 · 1 yr 10 mos
+        </span>
+      </div>
+
+      <!-- Bullet points -->
+      <ul class="relative flex flex-col gap-2">
+        {
+          [
+            "Developed and maintained microservices in Django and NestJS.",
+            "Migrated legacy code to modern alternatives such as NestJS.",
+            "Built controllers (PHP) to efficiently and safely connect to previously mentioned microservices.",
+            "De-facto coordinated a one-man department. Responsible for the entire project flow, starting at partner's first contact, project design, implementation, testing, and deployment, and finishing with partner's certification.",
+            "Responsible for handling communications with third parties.",
+          ].map((point) => (
+            <li class="flex gap-2 text-sm text-[var(--color-subtext)]">
+              <span class="exp-arrow shrink-0 font-bold">›</span>
+              <span>{point}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <!-- Tech badges -->
+      <div class="relative flex flex-wrap gap-2">
+        {
+          [
+            "Node.js",
+            "NestJS",
+            "React",
+            "PHP",
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "MariaDB",
+            "Redis",
+            "Coolify",
+          ].map((tech) => (
+            <span class="rounded-full bg-[var(--color-foreground)] border border-[var(--color-borderhover)] text-[var(--color-subtext)] text-xs px-3 py-1">
+              {tech}
+            </span>
+          ))
+        }
+      </div>
+
+      <!-- Metrics row -->
+      <div class="relative">
+        <div class="exp-metrics-divider mb-5"></div>
+        <div class="flex justify-center">
+          <div class="flex flex-col items-center gap-1">
+            <span class="text-[var(--color-text)] text-2xl font-extrabold"
+              >+5</span
+            >
+            <span
+              class="text-[var(--color-subtext)] text-xs uppercase tracking-widest"
+              >Integrations Developed</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondary card: Teacher -->
+    <div
+      class="relative rounded-3xl border border-[var(--color-borderhover)] bg-[var(--color-middleground)] px-10 py-8 flex flex-col gap-4"
+    >
+      <!-- Header -->
+      <div
+        class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
+      >
+        <div class="flex flex-col gap-1">
+          <span class="text-2xl font-extrabold text-[var(--color-text)]"
+            >Azerbaijan British College</span
+          >
+          <div class="flex flex-wrap items-center gap-2 text-sm">
+            <span class="text-[var(--color-subtext)] font-semibold"
+              >Primary and MFL Teacher</span
+            >
+            <span class="text-[var(--color-subtext)]">·</span>
+            <span class="text-[var(--color-subtext)]">Full-time</span>
+          </div>
+          <span class="text-[var(--color-subtext)] text-sm"
+            >Baku, Baku Economic Zone, Azerbaijan</span
+          >
+        </div>
+        <span
+          class="shrink-0 self-start px-4 py-1.5 rounded-full border border-[var(--color-borderhover)] bg-[var(--color-middleground)] text-[var(--color-subtext)] text-xs whitespace-nowrap"
+        >
+          Aug 2019 – Nov 2023 · 4 yrs 4 mos
+        </span>
+      </div>
+
+      <!-- Description -->
+      <p class="text-sm text-[var(--color-subtext)]">
+        Homeroom teacher and Specialist. Experience in teaching English, Maths,
+        Science and MFL through the National and Cambridge Curriculum.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .exp-divider {
+    width: 4rem;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(98, 114, 255, 0.55),
+      transparent
+    );
+  }
+
+  .exp-card-featured {
+    box-shadow: 0 0 60px 0 rgba(98, 114, 255, 0.06);
+  }
+
+  .exp-dots {
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.045) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+  }
+
+  .exp-role-pill {
+    background: linear-gradient(
+      130deg,
+      rgba(247, 248, 255, 0.08),
+      rgba(140, 168, 255, 0.12),
+      rgba(98, 114, 255, 0.1)
+    );
+    color: rgb(var(--rgb-glow-2));
+    border-color: rgba(98, 114, 255, 0.25);
+  }
+
+  .exp-arrow {
+    background: linear-gradient(
+      130deg,
+      rgb(247, 248, 255),
+      rgb(140, 168, 255),
+      rgb(98, 114, 255)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .exp-metrics-divider {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-borderhover),
+      transparent
+    );
+  }
+</style>
