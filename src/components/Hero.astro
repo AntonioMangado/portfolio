@@ -39,43 +39,22 @@
       See my experience
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2.5"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
         aria-hidden="true"
+        class="scroll-arrow"
       >
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
+        <polyline points="6 9 12 15 18 9" />
       </svg>
     </a>
   </div>
 
-  <!-- Bobbing scroll arrow -->
-  <a
-    href="#experience"
-    aria-label="Scroll to experience"
-    class="scroll-arrow mt-10 flex items-center justify-center w-10 h-10 text-[var(--color-subtext)] hover:text-[var(--color-text)] transition-colors"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  </a>
 </section>
 
 <style>
@@ -115,8 +94,8 @@
   }
 
   @keyframes bob {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(8px); }
+    0%, 100% { transform: translateY(-4px); }
+    50%       { transform: translateY(4px); }
   }
 
   .greeting-cursor {
