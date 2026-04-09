@@ -3,7 +3,7 @@
 ---
 
 <section
-  class="flex flex-col justify-center items-center min-h-[85vh] p-8 w-full"
+  class="flex flex-col justify-center items-center min-h-screen p-8 w-full"
 >
   <!-- Card -->
   <div class="hero-card relative overflow-hidden max-w-3xl w-full mx-auto rounded-3xl border border-[var(--color-borderhover)] bg-[var(--color-middleground)] px-12 py-16 flex flex-col items-center gap-10 text-center">
@@ -54,6 +54,28 @@
       </svg>
     </a>
   </div>
+
+  <!-- Bobbing scroll arrow -->
+  <a
+    href="#experience"
+    aria-label="Scroll to experience"
+    class="scroll-arrow mt-10 flex items-center justify-center w-10 h-10 text-[var(--color-subtext)] hover:text-[var(--color-text)] transition-colors"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </a>
 </section>
 
 <style>
@@ -86,6 +108,15 @@
     width: 5rem;
     height: 1px;
     background: linear-gradient(to right, transparent, rgba(98, 114, 255, 0.55), transparent);
+  }
+
+  .scroll-arrow {
+    animation: bob 1.6s ease-in-out infinite;
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(8px); }
   }
 
   .greeting-cursor {
