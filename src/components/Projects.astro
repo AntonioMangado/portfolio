@@ -4,6 +4,7 @@ const projects = [
     name: "Escapada",
     description: "Real-time collaborative packing list for group trips",
     tags: ["React", "Firebase", "Tailwind", "Vite"],
+    image: "/projects/escapada.png",
     previewUrl: "https://escapada-jet.vercel.app",
     githubUrl: "https://github.com/AntonioMangado/escapada",
   },
@@ -11,6 +12,7 @@ const projects = [
     name: "Imagena",
     description: "Browse thousands of photos and save your favourites via the Unsplash API",
     tags: ["React", "Unsplash API", "SCSS"],
+    image: "/projects/imagena.png",
     previewUrl: "https://imagena-manager.netlify.app/",
     githubUrl: "https://github.com/AntonioMangado/Imagena",
   },
@@ -18,6 +20,7 @@ const projects = [
     name: "Monster Hunter Companion",
     description: "Returns the most optimal weapon for a monster hunt in MH World",
     tags: ["JavaScript", "HTML", "CSS"],
+    image: "/projects/mh-companion.png",
     previewUrl: "https://antoniomangado.github.io/monterHunterCompanion/",
     githubUrl: "https://github.com/AntonioMangado/monterHunterCompanion",
   },
@@ -25,6 +28,7 @@ const projects = [
     name: "Unit Converter",
     description: "A unit conversion app built to practice Redux state management",
     tags: ["React", "Redux", "SCSS"],
+    image: "/projects/unit-converter.png",
     previewUrl: "https://antonios-unit-converter.netlify.app/",
     githubUrl: "https://github.com/AntonioMangado/UnitConverter",
   },
@@ -32,6 +36,7 @@ const projects = [
     name: "RGM Landing",
     description: "Landing page for RGM consultancy",
     tags: ["Astro", "CSS"],
+    image: "/projects/rgm-landing.png",
     previewUrl: "https://rgm-landing.vercel.app",
     githubUrl: "https://github.com/AntonioMangado/rgm-landing",
   },
@@ -44,7 +49,7 @@ const projects = [
 >
   <div class="w-full flex flex-col gap-6">
     <!-- Section heading -->
-    <div class="mb-4 flex flex-col items-center">
+    <div class="reveal mb-4 flex flex-col items-center">
       <div class="flex items-center gap-3">
         <h2 class="text-[var(--color-text)] text-4xl font-extrabold">
           Projects
@@ -58,23 +63,20 @@ const projects = [
 
     <!-- Card grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {projects.map((project) => (
-        <div class="proj-card rounded-2xl border border-[var(--color-borderhover)] bg-[var(--color-middleground)] overflow-hidden flex flex-col hover:-translate-y-1 transition-transform">
+      {projects.map((project, i) => (
+        <div
+          class="reveal proj-card rounded-2xl border border-[var(--color-borderhover)] bg-[var(--color-middleground)] overflow-hidden flex flex-col hover:-translate-y-1 transition-transform"
+          style={`transition-delay: ${i * 0.08}s`}
+        >
           <!-- Preview area -->
           <div class="relative h-56 overflow-hidden">
-            {project.previewUrl ? (
-              <div class="proj-iframe-wrapper absolute inset-0">
-                <iframe
-                  src={project.previewUrl}
-                  scrolling="no"
-                  tabindex="-1"
-                  class="absolute top-0 left-0 border-0 pointer-events-none"
-                  style="width: 1280px; height: 800px; transform-origin: top left;"
-                />
-              </div>
-            ) : (
-              <div class="absolute inset-0" style={`background: ${project.gradient};`}></div>
-            )}
+            <img
+              src={project.image}
+              alt={project.name}
+              class="absolute inset-0 w-full h-full object-cover object-top"
+              loading="lazy"
+              decoding="async"
+            />
             <!-- Action buttons -->
             <div class="absolute top-2 right-2 flex gap-1.5 z-10">
               {project.previewUrl && (
@@ -129,19 +131,6 @@ const projects = [
   </div>
 </section>
 
-<script>
-  function scaleIframes() {
-    document.querySelectorAll<HTMLElement>('.proj-iframe-wrapper').forEach((wrapper) => {
-      const iframe = wrapper.querySelector<HTMLElement>('iframe');
-      if (!iframe) return;
-      const scale = wrapper.clientWidth / 1280;
-      iframe.style.transform = `scale(${scale})`;
-    });
-  }
-
-  scaleIframes();
-  window.addEventListener('resize', scaleIframes);
-</script>
 
 <style>
   .proj-divider {
