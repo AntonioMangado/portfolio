@@ -36,3 +36,7 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+.reveal-faded.visible {
+  opacity: 0.5;
+}
